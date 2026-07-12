@@ -17,6 +17,7 @@ export default function Dashboard() {
     <div className="min-h-screen bg-gray-100 font-sans">
       <nav className="bg-slate-800 text-white p-4 flex justify-between items-center shadow-md">
         <span className="font-bold text-lg tracking-wide text-blue-400">AssetFlow Admin Portal</span>
+        <a href="/org-setup" className="text-sm font-medium hover:text-blue-400">Organization Setup</a>
       </nav>
 
       <main className="space-y-12 pb-12">
