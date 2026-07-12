@@ -2,6 +2,8 @@ import { BrowserRouter } from 'react-router-dom';
 import AppRoutes from './AppRoutes/AppRoutes';
 // @ts-ignore
 import { ResourceBookingScreen } from './components/ResourceBookingScreen';
+// @ts-ignore
+import { MaintenanceManagementScreen } from './components/MaintenanceManagementScreen';
 
 function App() {
   const mockAssetId = 1;
@@ -14,9 +16,15 @@ function App() {
         <AppRoutes />
       </BrowserRouter>
       
-      {/* Displaying your AssetFlow booking module below */}
-      <main className="border-t border-gray-300 mt-6">
-        <ResourceBookingScreen selectedAssetId={mockAssetId} assetName={mockAssetName} />
+      {/* Displaying AssetFlow Core Modules */}
+      <main className="space-y-12 pb-12">
+        <div>
+          <ResourceBookingScreen selectedAssetId={mockAssetId} assetName={mockAssetName} />
+        </div>
+        
+        <div className="border-t border-gray-300 pt-6">
+          <MaintenanceManagementScreen />
+        </div>
       </main>
     </div>
   );
