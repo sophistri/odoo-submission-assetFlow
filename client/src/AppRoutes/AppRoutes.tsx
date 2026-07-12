@@ -1,13 +1,14 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Login from '../Pages/Login/Login';
 import Signup from '../Pages/Login/Signup';
+import Dashboard from '../Pages/Dashboard/Dashboard';
 
 export default function AppRoutes() {
   return (
     <Routes>
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
-      <Route path="/dashboard" element={<div>Dashboard placeholder</div>} />
+      <Route path="/dashboard" element={<Dashboard />} />
       <Route path="*" element={<Navigate to="/login" />} />
     </Routes>
   );

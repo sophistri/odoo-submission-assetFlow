@@ -9,5 +9,7 @@ public class AssetCategory
     [Required, MaxLength(100)]
     public string Name { get; set; } = string.Empty;
 
+    public string? CustomFieldsJson { get; set; } // e.g. {"warrantyPeriodMonths": 24}
+
     public ICollection<Asset> Assets { get; set; } = new List<Asset>();
 }

@@ -21,5 +21,16 @@ public class AppDbContext : DbContext
         modelBuilder.Entity<Asset>()
             .HasIndex(a => a.AssetTag)
             .IsUnique();
-    }
+        modelBuilder.Entity<Department>()
+            .HasOne(d => d.DepartmentHead)
+            .WithMany()
+            .HasForeignKey(d => d.DepartmentHeadId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        modelBuilder.Entity<Department>()
+            .HasOne(d => d.ParentDepartment)
+            .WithMany()
+            .HasForeignKey(d => d.ParentDepartmentId)
+            .OnDelete(DeleteBehavior.Restrict);
+            }
 }
