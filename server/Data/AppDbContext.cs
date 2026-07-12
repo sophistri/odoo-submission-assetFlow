@@ -11,6 +11,8 @@ public class AppDbContext : DbContext
     public DbSet<Asset> Assets => Set<Asset>();
     public DbSet<AssetCategory> AssetCategories => Set<AssetCategory>();
     public DbSet<Department> Departments => Set<Department>();
+    public DbSet<AssetAttachment> AssetAttachments => Set<AssetAttachment>();
+    public DbSet<AssetHistory> AssetHistories => Set<AssetHistory>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
