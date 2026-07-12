@@ -1,4 +1,6 @@
-import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import AppRoutes from './AppRoutes/AppRoutes';
+// @ts-ignore
 import { ResourceBookingScreen } from './components/ResourceBookingScreen';
 
 function App() {
@@ -7,10 +9,13 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-100 font-sans">
-      <nav className="bg-blue-600 p-4 shadow-md">
-        <h1 className="text-white font-bold text-xl tracking-tight">AssetFlow Management Platform</h1>
-      </nav>
-      <main>
+      {/* Keeping your teammate's routes active */}
+      <BrowserRouter>
+        <AppRoutes />
+      </BrowserRouter>
+      
+      {/* Displaying your AssetFlow booking module below */}
+      <main className="border-t border-gray-300 mt-6">
         <ResourceBookingScreen selectedAssetId={mockAssetId} assetName={mockAssetName} />
       </main>
     </div>
