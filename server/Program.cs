@@ -7,6 +7,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseMySql(
+        builder.Configuration.GetConnectionString("Default"),
+        ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("Default"))
+    ));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
