@@ -5,6 +5,10 @@ import { ResourceBookingScreen } from './components/ResourceBookingScreen';
 import { MaintenanceManagementScreen } from './components/MaintenanceManagementScreen';
 // @ts-ignore
 import { AssetAuditScreen } from './components/AssetAuditScreen';
+// @ts-ignore
+import { ReportsAnalyticsScreen } from './components/ReportsAnalyticsScreen';
+// @ts-ignore
+import { ActivityLogsScreen } from './components/ActivityLogsScreen';
 
 function App() {
   const mockAssetId = 1;
@@ -27,6 +31,14 @@ function App() {
 
         <div className="border-t border-gray-200 pt-6">
           <AssetAuditScreen />
+        </div>
+
+        <div className="border-t border-gray-200 pt-6">
+          <ReportsAnalyticsScreen />
+        </div>
+
+        <div className="border-t border-gray-200 pt-6">
+          <ActivityLogsScreen />
         </div>
       </main>
     </div>
